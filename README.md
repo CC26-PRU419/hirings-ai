@@ -1,13 +1,7 @@
 # Hirings AI Service
 **Know Your Gap. Own Your Future.**
 
-Hirings AI Service adalah komponen kecerdasan buatan dari aplikasi capstone DBS Foundation Coding Camp 2026 Tim CC26-PRU419. Repo ini berisi seluruh pipeline AI Engineer — mulai dari proses build model, training, hingga deployment sebagai REST API yang digunakan oleh backend Hirings.
-
-**Anggota AI Engineer:**
-- Ainur Roshidatul Ulla (CACC284D6X1507)
-- Alya Cahyani Humaira (CACC133D6X0143)
-
----
+Hirings adalah aplikasi capstone DBS Foundation Coding Camp 2026 Tim CC26-PRU419 yang membantu fresh graduate memahami skill yang sudah dimiliki, membandingkannya dengan kebutuhan karier, dan mendapatkan rekomendasi jalur karier yang lebih terarah. Repository ini berisi seluruh pipeline AI Engineer mulai dari proses build model, training, hingga deployment sebagai REST API yang digunakan oleh backend Hirings.
 
 ## Project Status
 
@@ -26,15 +20,15 @@ Fitur AI yang sudah tersedia:
 
 ```
 .
-├── AI_notebook.ipynb              # Notebook build & training model (dokumentasi lengkap)
-├── app.py                         # FastAPI service — entry point deployment
-├── skill_forecast_model.keras     # Model LSTM untuk forecasting skill trend
-├── tfidf_vectorizer.pkl           # TF-IDF vectorizer hasil training
-├── forecast_scaler.pkl            # MinMaxScaler untuk preprocessing input forecast
-├── job_salary_mean.csv            # Dataset rata-rata gaji per role
-├── requirements.txt               # Python dependencies
-├── runtime.txt                    # Python runtime version
-├── Dockerfile                     # Container config untuk deployment
+├── AI_notebook.ipynb              
+├── app.py                         
+├── skill_forecast_model.keras    
+├── tfidf_vectorizer.pkl           
+├── forecast_scaler.pkl            
+├── job_salary_mean.csv            
+├── requirements.txt               
+├── runtime.txt                    
+├── Dockerfile                     
 └── README.md
 ```
 
