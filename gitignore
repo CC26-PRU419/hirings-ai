@@ -1,0 +1,26 @@
+# Dataset besar (download otomatis via gdown)
+job_embeddings.npy
+tfidf_matrix.npz
+linkedin_jobs_cleaned.csv
+final_jobs_data.csv
+
+# Environment
+.env
+*.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Temporary files (CV parsing)
+temp_*
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
