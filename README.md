@@ -1,13 +1,7 @@
 # Hirings AI Service
 **Know Your Gap. Own Your Future.**
 
-Hirings AI Service adalah komponen kecerdasan buatan dari aplikasi capstone DBS Foundation Coding Camp 2026 Tim CC26-PRU419. Repo ini berisi seluruh pipeline AI Engineer — mulai dari proses build model, training, hingga deployment sebagai REST API yang digunakan oleh backend Hirings.
-
-**Anggota AI Engineer:**
-- Ainur Roshidatul Ulla (CACC284D6X1507)
-- Alya Cahyani Humaira (CACC133D6X0143)
-
----
+Hirings adalah aplikasi capstone DBS Foundation Coding Camp 2026 Tim CC26-PRU419 yang membantu fresh graduate memahami skill yang sudah dimiliki, membandingkannya dengan kebutuhan karier, dan mendapatkan rekomendasi jalur karier yang lebih terarah. Repository ini berisi seluruh pipeline AI Engineer mulai dari proses build model, training, hingga deployment sebagai REST API yang digunakan oleh backend Hirings.
 
 ## Project Status
 
@@ -26,15 +20,16 @@ Fitur AI yang sudah tersedia:
 
 ```
 .
-├── AI_notebook.ipynb              # Notebook build & training model (dokumentasi lengkap)
-├── app.py                         # FastAPI service — entry point deployment
-├── skill_forecast_model.keras     # Model LSTM untuk forecasting skill trend
-├── tfidf_vectorizer.pkl           # TF-IDF vectorizer hasil training
-├── forecast_scaler.pkl            # MinMaxScaler untuk preprocessing input forecast
-├── job_salary_mean.csv            # Dataset rata-rata gaji per role
-├── requirements.txt               # Python dependencies
-├── runtime.txt                    # Python runtime version
-├── Dockerfile                     # Container config untuk deployment
+├── AI_notebook.ipynb              
+├── app.py                         
+├── skill_forecast_model.keras    
+├── tfidf_vectorizer.pkl           
+├── forecast_scaler.pkl            
+├── job_salary_mean.csv
+├── logs.zip        
+├── requirements.txt               
+├── runtime.txt                    
+├── Dockerfile                     
 └── README.md
 ```
 
@@ -96,7 +91,7 @@ Menggunakan **Gemini 2.5 Flash Lite** untuk menghasilkan career advice yang dipe
 | Generative AI | Google Generative AI (Gemini) |
 | Data Processing | Pandas, NumPy, SciPy |
 | CV Parsing | pdfplumber |
-| Model Serialization | Joblib, h5py |
+| Model Serialization | Joblib |
 | Deployment | HuggingFace Spaces (Docker) |
 
 ---
@@ -111,7 +106,7 @@ GET /
 ```
 Response:
 ```json
-{ "message": "Hirings AI Service Running" }
+{ "message": "Hirings AI API is running!" }
 ```
 
 ### Job Recommendation
@@ -121,38 +116,53 @@ Content-Type: application/json
 ```
 Request:
 ```json
-{ "skills": "Python Machine Learning TensorFlow SQL" }
+{ "skills": "SQL React Node.js Machine Learning" }
 ```
 Response:
 ```json
 [
   {
     "job_id": 3902823365,
-    "title": "Data Scientist",
-    "location": "Jakarta, ID",
+    "company_id": 359901,
+    "title": "GCP Platform Engineer",
+    "location": "Johns Creek, GA",
+    "formatted_experience_level": 0,
     "min_salary": 60000,
-    "max_salary": 90000,
-    "similarity_score": 0.82,
-    "roadmap": ["Python", "Machine Learning", "SQL", "TensorFlow"]
+    "max_salary": 80000,
+    "avg_salary": 70000,
+    "salary_range": "60000 - 80000",
+    "remote_allowed": 0,
+    "similarity_score": 0.11679133772850037,
+    "roadmap": [
+      "Learn Communication Skills",
+      "Build Portfolio Projects",
+      "Learn Problem Solving",
+      "Practice Interview Preparation"
+    ],
+    "industry": "Technology"
   }
 ]
 ```
 
-### Skill Trend Forecast
+### Forecast
 ```
 POST /forecast
 Content-Type: application/json
 ```
 Request:
 ```json
-{ "trend": [70, 80, 90] }
+{
+    "trend": [70, 80, 90]
+}
 ```
 Response:
 ```json
-{ "prediction": 95.4 }
+{
+    "prediction": 80.54
+}
 ```
 
-### CV Parsing
+### Parse CV
 ```
 POST /parse-cv
 Content-Type: multipart/form-data
@@ -164,7 +174,7 @@ Response:
 {
   "success": true,
   "data": {
-    "skills": ["Python", "SQL", "TensorFlow"],
+    "skills": ["SQL"],
     "raw_text": "..."
   }
 }
@@ -177,7 +187,7 @@ Content-Type: application/json
 ```
 Request:
 ```json
-{ "skills": "React Node.js SQL" }
+{ "skills": "Python SQL Machine Learning" }
 ```
 
 ### AI Career Chat
@@ -190,10 +200,11 @@ Request:
 {
   "user_message": "Saya cocok kerja apa?",
   "context": {
-    "skills": ["Python", "SQL"],
+    "skills": ["React", "Node.js", "SQL"],
     "cv_raw_text": "...",
-    "skill_gap": { "missing_skills": ["Docker", "CI/CD"] },
-    "career_recommendations": ["Data Analyst", "Data Engineer"]
+    "skill_gap": {
+      "missing_skills": ["Docker", "CI/CD"] },
+    "career_recommendations": ["Frontend Developer", "Fullstack Developer"]
   }
 }
 ```
@@ -201,8 +212,8 @@ Response:
 ```json
 {
   "success": true,
-  "reply": "Berdasarkan skill kamu...",
-  "recommendations": ["Data Analyst", "Data Engineer"],
+  "reply": "...",
+  "recommendations": ["Frontend Developer", "Fullstack Developer"],
   "next_steps": ["Docker", "CI/CD"]
 }
 ```
@@ -251,7 +262,7 @@ API berjalan di: `http://localhost:7860`
 
 ## Notebook
 
-File `AI_notebook.ipynb` berisi dokumentasi lengkap seluruh proses pengembangan model:
+File `Capstone_Project_AI_Engineer.ipynb` berisi dokumentasi lengkap seluruh proses pengembangan model:
 
 1. **Data Loading & Understanding** — eksplorasi dataset LinkedIn Jobs dan salary data
 2. **Data Cleaning & Preprocessing** — text cleaning, deduplication, feature engineering
