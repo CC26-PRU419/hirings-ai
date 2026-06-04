@@ -20,7 +20,7 @@ Fitur AI yang sudah tersedia:
 
 ```
 .
-├── AI_notebook.ipynb              
+├── Capstone_Project_AI_Engineer.ipynb              
 ├── app.py                         
 ├── skill_forecast_model.keras    
 ├── tfidf_vectorizer.pkl           
