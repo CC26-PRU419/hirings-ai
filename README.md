@@ -123,12 +123,23 @@ Response:
 [
   {
     "job_id": 3902823365,
-    "title": "Data Scientist",
-    "location": "Jakarta, ID",
+    "company_id": 359901,
+    "title": "GCP Platform Engineer",
+    "location": "Johns Creek, GA",
+    "formatted_experience_level": 0,
     "min_salary": 60000,
-    "max_salary": 90000,
-    "similarity_score": 0.82,
-    "roadmap": ["Python", "Machine Learning", "SQL", "TensorFlow"]
+    "max_salary": 80000,
+    "avg_salary": 70000,
+    "salary_range": "60000 - 80000",
+    "remote_allowed": 0,
+    "similarity_score": 0.11679133772850037,
+    "roadmap": [
+      "Learn Communication Skills",
+      "Build Portfolio Projects",
+      "Learn Problem Solving",
+      "Practice Interview Preparation"
+    ],
+    "industry": "Technology"
   }
 ]
 ```
