@@ -37,9 +37,9 @@ Fitur AI yang sudah tersedia:
 
 | File | Deskripsi | Ukuran | Link |
 |------|-----------|--------|------|
-| `final_jobs_data.csv` | Dataset utama LinkedIn Jobs | ~? MB | [Download](https://drive.google.com/uc?id=1huZCfGSnq9SOGYb-zM9_ATy_wLxYq4dH) |
-| `job_embeddings.npy` | Sentence embedding hasil encode | ~? MB | [Download](https://drive.google.com/uc?id=1ueagG984DBYqbrhLtkOMHe-fisy8O-0N) |
-| `tfidf_matrix.npz` | TF-IDF sparse matrix | ~? MB | [Download](https://drive.google.com/uc?id=1ADxNww9brEmaasXU7pkFjVhFXhcQ_vhw) |
+| `final_jobs_data.csv` | Dataset utama LinkedIn Jobs | 1110 MB | [Download](https://drive.google.com/uc?id=1huZCfGSnq9SOGYb-zM9_ATy_wLxYq4dH) |
+| `job_embeddings.npy` | Sentence embedding hasil encode | 181.4 MB | [Download](https://drive.google.com/uc?id=1ueagG984DBYqbrhLtkOMHe-fisy8O-0N) |
+| `tfidf_matrix.npz` | TF-IDF sparse matrix | 254.6 MB | [Download](https://drive.google.com/uc?id=1ADxNww9brEmaasXU7pkFjVhFXhcQ_vhw) |
 ---
 
 ## Model Overview
