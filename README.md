@@ -35,6 +35,11 @@ Fitur AI yang sudah tersedia:
 
 > **Catatan:** File besar seperti `final_jobs_data.csv`, `job_embeddings.npy`, dan `tfidf_matrix.npz` tidak disimpan di repo ini. File-file tersebut di-download otomatis dari Google Drive saat `app.py` dijalankan pertama kali via `gdown`.
 
+| File | Deskripsi | Ukuran | Link |
+|------|-----------|--------|------|
+| `final_jobs_data.csv` | Dataset utama LinkedIn Jobs | ~? MB | [Download](https://drive.google.com/uc?id=1huZCfGSnq9SOGYb-zM9_ATy_wLxYq4dH) |
+| `job_embeddings.npy` | Sentence embedding hasil encode | ~? MB | [Download](https://drive.google.com/uc?id=1ueagG984DBYqbrhLtkOMHe-fisy8O-0N) |
+| `tfidf_matrix.npz` | TF-IDF sparse matrix | ~? MB | [Download](https://drive.google.com/uc?id=1ADxNww9brEmaasXU7pkFjVhFXhcQ_vhw) |
 ---
 
 ## Model Overview
