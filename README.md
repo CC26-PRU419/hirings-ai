@@ -33,7 +33,9 @@ Fitur AI yang sudah tersedia:
 └── README.md
 ```
 
-> **Catatan:** File besar seperti `final_jobs_data.csv`, `job_embeddings.npy`, dan `tfidf_matrix.npz` tidak disimpan di repo ini. File-file tersebut di-download otomatis dari Google Drive saat `app.py` dijalankan pertama kali via `gdown`.
+> **Catatan:** File besar seperti `final_jobs_data.csv`, `job_embeddings.npy`, dan `tfidf_matrix.npz` tidak disimpan di repo ini. File-file tersebut di-download otomatis dari Google Drive saat `app.py` dijalankan pertama kali via `gdown`. Dapat diunduh melalui 
+folder Google Drive berikut: [📁 Folder Dataset AI Service (Google Drive)](https://drive.google.com/drive/folders/1GK3a9h1y0jtHbrXges-tb8WF8bGYwVHx)
+Detail:
 
 | File | Deskripsi | Ukuran | Link |
 |------|-----------|--------|------|
